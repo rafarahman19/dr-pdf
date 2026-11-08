@@ -7,7 +7,7 @@ import time
 
 # --- CONFIG ---
 # Mengambil API Key dengan aman dari Streamlit Secrets atau Environment Variable
-API_KEY = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY", "")
+API_KEY = st.secrets.get("GEMINI_API_KEY", "")
 
 # --- FUNGSI BACA PDF ---
 @st.cache_data(show_spinner=False)
